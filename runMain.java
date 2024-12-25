@@ -148,6 +148,23 @@ public class runMain{
                   }
                }while(storageLoop);
             }
+            if (modeChoice == 2) {
+               String[] items = new String [itemCount];
+               
+               System.out.println("\n     <<< MARKET >>>");  
+               if (itemsList.isEmpty()) { 
+                  System.out.println("No items yet in the Market.\n"); 
+                     loop = true;
+               } else { 
+                  System.out.println("\nITEMS AVAILABLE:"); 
+                  for (Items item : itemsList) { 
+                     item.availableItems();    // Display tanan item nga na-register                     
+                     System.out.println();
+                  }
+                   
+                  loop = true;
+                  }
+            }
          }                   
          catch (Exception  e) {
             System.out.println("\nAN ERROR OCCURRED.. TRY AGAIN? [y/n]: ");
